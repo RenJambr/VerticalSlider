@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: system-ui;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.left-slider{
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    top: 0px;
+    left: 0px;
+    transition: top 0.5s ease;
+
+}
+.left-slider > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.left-slider div h1{
+    font-size:30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.left-slider div p{
+    font-size: 18px;
+}
+.right-slider{
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    left: 35%;
+    transition: bottom 0.5s ease;
+}
+.right-slider > div{
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.action-buttons{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+button{
+    z-index: 100;
+    position: absolute;
+    background-color: #fff;
+    border:none;
+    font-size:16px;
+    padding: 20px;
+    color:#aaa;
+    cursor: pointer;
+}
+button:focus{
+    outline:none;
+}
+button:hover{
+    color: #000;
+}
+.down-button{
+    transform: translateX(-100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.up-button{
+    transform: translateY(-100%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
